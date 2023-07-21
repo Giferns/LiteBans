@@ -1,0 +1,75 @@
+[ru]
+TIME_ELEMENT_SECOND 	= секунда
+TIME_ELEMENT_SECONDS 	= секунд
+TIME_ELEMENT_MINUTE 	= минута
+TIME_ELEMENT_MINUTES 	= минут
+TIME_ELEMENT_HOUR 	= час
+TIME_ELEMENT_HOURS 	= часов
+TIME_ELEMENT_DAY 	= день
+TIME_ELEMENT_DAYS 	= дней
+TIME_ELEMENT_WEEK 	= неделя
+TIME_ELEMENT_WEEKS 	= недель
+TIME_ELEMENT_MONTH 	= месяц
+TIME_ELEMENT_MONTHS 	= месяцев
+TIME_ELEMENT_PERMANENTLY= навсегда
+TIME_ELEMENT_AND 	= и
+
+BANMENU_TITLE 	= \d[\rBan Menu\d] \yВыберите игрока
+TIMEMENU_TITLE 	= \d[\rTime Menu\d] \yВыберите время бана
+REASONMENU_TITLE= \d[\rReason Menu\d] \yВыберите причину
+UNBANMENU_TITLE = \d[\rUnBan Menu\d] \yВыберите игрока
+OFFMENU_TITLE 	= \d[\rOffline Menu\d] \yВыберите игрока
+CUSTOM_REASON 	= \rСвоя причина
+
+ACCESS_DENIED_CNSL 	= * Доступ запрещен!
+USER_NOT_CONN_CNSL 	= *** Этот игрок отсутствует на сервере! ***
+USER_IMMUNITY_CNSL 	= *** Этот игрок имеет иммунитет. Забанить его нельзя! ***
+FIND_BAN_SYNTAX_CNSL 	= * Синтаксис: find_ban "Часть ника ИЛИ steamid" номер страницы^n* Пример: find_ban "Neugo" 1^n* 10 страниц максимум. 10 записей на одной странице
+AMX_BAN_SYNTAX_CNSL 	= * Синтаксис: amx_ban time "#userid ИЛИ Ник ИЛИ steamid" "reason"^n* Пример: amx_ban 666 "neugomon" "example"
+AMX_UNBAN_SYNTAX_CNSL  	= * Синтаксис: amx_unban "Ник ИЛИ steamid"^n* Пример: amx_unban "neugomon"
+
+NOT_EXPIRED 	= Никогда
+BAN_PERMANENT 	= Перманент
+BAN_LEN_PERM 	= Веки вечные...
+BAN_KICK_MSG 	= Вы были забанены! Подробности в консоли
+BAN_NOT_FOUND 	= Результатов нет. Попробуйте еще.
+
+UNBANMENU_PLAYERS_NOT_FOUND = Банов нет...
+
+[en]
+TIME_ELEMENT_SECOND 	= second
+TIME_ELEMENT_SECONDS 	= seconds
+TIME_ELEMENT_MINUTE 	= minute
+TIME_ELEMENT_MINUTES 	= minutes
+TIME_ELEMENT_HOUR 	= hour
+TIME_ELEMENT_HOURS 	= hours
+TIME_ELEMENT_DAY 	= day
+TIME_ELEMENT_DAYS 	= days
+TIME_ELEMENT_WEEK 	= week
+TIME_ELEMENT_WEEKS 	= weeks
+TIME_ELEMENT_MONTH 	= month
+TIME_ELEMENT_MONTHS 	= months
+TIME_ELEMENT_PERMANENTLY= permanently
+TIME_ELEMENT_AND 	= и
+
+BANMENU_TITLE 	= \d[\rBan Menu\d] \yChose player
+TIMEMENU_TITLE 	= \d[\rTime Menu\d] \yChose ban time
+REASONMENU_TITLE= \d[\rReason Menu\d] \yChose reason
+UNBANMENU_TITLE = \d[\rUnBan Menu\d] \yChose player
+OFFMENU_TITLE 	= \d[\rOffline Menu\d] \yChose player
+CUSTOM_REASON 	= \rOwn reason
+
+ACCESS_DENIED_CNSL 	= * Access is denied!
+USER_NOT_CONN_CNSL 	= *** This player is not on the server! ***
+USER_IMMUNITY_CNSL 	= *** This player has immunity. You can not banned him! ***
+FIND_BAN_SYNTAX_CNSL 	= * Syntax: find_ban "part of the OR steamid" page number^n* Example: find_ban "Neugo" 1^n* 10 pages maximum. records on one page
+AMX_BAN_SYNTAX_CNSL 	= * Syntax: amx_ban time "#userid OR Name OR steamid" "reason"^n* Example: amx_ban 666 "neugomon" "example"
+AMX_UNBAN_SYNTAX_CNSL  	= * Syntax: amx_unban "Name OR steamid"^n* Example: amx_unban "neugomon"
+
+NOT_EXPIRED 	= Never
+BAN_PERMANENT 	= Permanently
+BAN_LEN_PERM 	= Forever...
+BAN_KICK_MSG 	= You has been banned! Detals in the console
+BAN_NOT_FOUND 	= No results. Try again.
+
+UNBANMENU_PLAYERS_NOT_FOUND = Bans not found...
