@@ -17,15 +17,17 @@
 		* Фикс компиляции на amxx 190+
 		* Форварду user_banned_pre() добавлены аргументы admin_id и ban_minutes
 		* Фикс повторного бана уже забаненного игрока (пока в самом простом неинтуитивном варианте)
+	2.4f (18.04.2025):
+		* Форварду user_banned_pre() добавлен аргумент ban_reason
+		* Добавлено описание API (scripting/include/litebans.inc)
 */
 
-new const PLUGIN_VERSION[] = "2.3f";
+new const PLUGIN_VERSION[] = "2.4f";
 
 #include <amxmodx>
 #include <time>
 #include <sqlx>
-
-const MAX_REASON_LENGTH = 96;
+#include <litebans>
 
 enum _:global_cvars
 {
@@ -183,7 +185,7 @@ public plugin_init()
 	g_pCvars[hudpos] = register_cvar("lb_hud_pos",  	"0.05 0.30");
 	g_pCvars[hudclr] = register_cvar("lb_hud_color",  	"0 255 0");
 
-	g_fwdHandle[PreBan]  = CreateMultiForward("user_banned_pre", ET_IGNORE, FP_CELL, FP_CELL, FP_CELL);
+	g_fwdHandle[PreBan]  = CreateMultiForward("user_banned_pre", ET_IGNORE, FP_CELL, FP_CELL, FP_CELL, FP_STRING);
 	g_fwdHandle[SqlInit]  = CreateMultiForward("lite_bans_sql_init", ET_IGNORE, FP_CELL);
 
 	LoadCvars();
@@ -842,7 +844,7 @@ BanAction(admin, banned)
 		}
 	}
 /* Вызываем форвард Pre Banned */
-	new ret; ExecuteForward(g_fwdHandle[PreBan], ret, banned, admin, g_arrBanData[admin][bantime]);
+	new ret; ExecuteForward(g_fwdHandle[PreBan], ret, banned, admin, g_arrBanData[admin][bantime], g_arrBanData[admin][reason]);
 /* Экранируем */
 	mysql_escape_string(szuName, charsmax(szuName));
 	mysql_escape_string(g_arrBanData[admin][reason], charsmax(g_arrBanData[][reason]));
